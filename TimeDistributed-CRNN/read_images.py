@@ -18,7 +18,7 @@ from keras.preprocessing import sequence
 #%%
 #reading the class files
 data = {}
-with codecs.open("Data/class.txt", 'r', encoding='utf-8') as cF:
+with codecs.open("/content/curiouz_tech/TimeDistributed-CRNN/Data/class.txt", 'r', encoding='utf-8') as cF:
     data = cF.read().split('\n')
     
 #%%
@@ -29,7 +29,7 @@ def returnClasses(string):
     classes = np.asarray(classes)
     return classes
     
-infile = pd.read_csv(r"E:\Code\Test\TimeDistributed-CRNN\Data\final.csv", encoding= 'utf-8')
+infile = pd.read_csv(r"/content/curiouz_tech/TimeDistributed-CRNN/Data/final.csv", encoding= 'utf-8')
 
 def find_max_width(path):
     infile = pd.read_csv(path, encoding = 'utf-8')
@@ -57,7 +57,7 @@ def find_max_width(path):
     return(max_width)
         
 #%%
-max_width = find_max_width(r"E:\Code\Test\TimeDistributed-CRNN\Data\final.csv")
+max_width = find_max_width(r"/content/curiouz_tech/TimeDistributed-CRNN/Data/final.csv")
 
 def split_frames(path):
     image = cv2.imread(path, cv2.IMREAD_GRAYSCALE)

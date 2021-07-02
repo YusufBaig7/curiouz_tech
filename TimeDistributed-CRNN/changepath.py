@@ -12,8 +12,8 @@ with open(r'E:\Code\Test\TimeDistributed-CRNN\Data\unicodefinal.txt', newline = 
             text.append(game[1])
 #print(label)
 #print(text)
-path1 = "E:\Code\Test\TimeDistributed-CRNN\Data\images_final\\"
+path1 = "/content/curiouz_tech/TimeDistributed-CRNN/Data/images_final\\"
 with open(r'E:\Code\Test\TimeDistributed-CRNN\Data\unicodefinal.txt', newline = '', encoding="utf-16") as games:
-    with open(r'E:\Code\Test\TimeDistributed-CRNN\Data\out.txt', "wt", encoding="utf-16") as fout:
+    with open(r'E:\Code\Test\TimeDistributed-CRNN\Data\outq1.txt', "wt", encoding="utf-16") as fout:
         for line, i in zip(games, range(len(label))):
             fout.write(line.replace(label[i], path1 + label[i]))
