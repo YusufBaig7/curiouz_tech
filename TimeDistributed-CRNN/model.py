@@ -54,9 +54,9 @@ network.compile(Adam(learning_rate=0.0001))
 
 
 #%%    
-x_train, y_train, x_train_len, y_train_len = prepareData(r"/content/curiouz_tech/TimeDistributed-CRNN/Data/final.csv")
+x_train, y_train, x_train_len, y_train_len = prepareData(r"./Data/final1.csv")
 
-x_test_pad, y_test_pad, x_test_len, y_test_len = prepareData(r"/content/curiouz_tech/TimeDistributed-CRNN/Data/final.csv")
+x_test_pad, y_test_pad, x_test_len, y_test_len = prepareData(r"./Data/final1.csv")
 
 nb_labels = 49# number of labels (10, this is digits)
 batch_size = 5 # size of the batch that are considered
@@ -75,7 +75,7 @@ network.fit(x=[x_train, y_train, x_train_len, y_train_len], y=np.zeros(nb_train)
 
 #%%
 
-network.save_model(r"/content/curiouz_tech/TimeDistributed-CRNN/chomu")
+network.save_model(r"./chomu")
 print(r"Saved model to disk")
 
 # Evaluation: loss, label error rate and sequence error rate are requested
